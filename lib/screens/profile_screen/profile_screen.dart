@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:rick_morty/screens/edit_profile_screen/widgets/fio_body.dart';
 import 'package:rick_morty/screens/edit_profile_screen/widgets/login_body.dart';
-import 'package:rick_morty/sourse/constans.dart';
+import 'package:rick_morty/source/constants.dart';
 import 'package:rick_morty/style/app_colors.dart';
 import 'package:rick_morty/style/app_text_styles.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key,
-  required this.type,
+  const ProfileScreen({
+    Key? key,
+    required this.type,
   }) : super(key: key);
   final TextFieldType type;
 
@@ -57,6 +58,5 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
         ));
-
   }
 }

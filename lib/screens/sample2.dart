@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:rick_morty/sourse/images.dart';
-import 'package:rick_morty/sourse/svg.dart';
+import 'package:rick_morty/source/images.dart';
+import 'package:rick_morty/source/svg.dart';
 import 'package:rick_morty/style/app_colors.dart';
 import 'package:rick_morty/style/app_text_styles.dart';
 
@@ -49,10 +48,10 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Stack(
       clipBehavior: Clip.none,
-
       children: [
-        Image.asset(AppImages.seria,
-        fit:  BoxFit.cover,
+        Image.asset(
+          AppImages.seria,
+          fit: BoxFit.cover,
         ),
         Center(
           child: Opacity(
@@ -84,10 +83,10 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
                     child: Column(
                       children: [
                         SizedBox(
-
                           child: SvgPicture.asset(AppSvg.play),
                         ),
-                        const Text('М.Найт', style: AppTextStyle.textStyle2ww500),
+                        const Text('М.Найт',
+                            style: AppTextStyle.textStyle2ww500),
                         const SizedBox(
                           height: 10,
                         ),
