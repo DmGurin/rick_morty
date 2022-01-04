@@ -6,6 +6,7 @@ import 'package:rick_morty/screens/profile_screen/profile_screen.dart';
 import 'package:rick_morty/screens/series_screen.dart';
 import 'package:rick_morty/screens/setting_screen/sample2.dart';
 import 'package:rick_morty/screens/setting_screen/setting_screen.dart';
+import 'package:rick_morty/screens/setting_screen/widget/sample3.dart';
 import 'package:rick_morty/sourse/constans.dart';
 import 'package:rick_morty/sourse/svg.dart';
 import 'package:rick_morty/style/app_colors.dart';
@@ -44,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ProfileScreen(type: TextFieldType.fio,),
           SeriesScreen(),
           Sample2(),
+          Sample3(),
           Center(
             child: Text('Second Page'),
           ),
