@@ -2,9 +2,9 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rick_morty/screens/profile_screen/profile_screen.dart';
-import 'package:rick_morty/sourse/constans.dart';
-import 'package:rick_morty/sourse/images.dart';
-import 'package:rick_morty/sourse/svg.dart';
+import 'package:rick_morty/source/constants.dart';
+import 'package:rick_morty/source/images.dart';
+import 'package:rick_morty/source/svg.dart';
 import 'package:rick_morty/style/app_colors.dart';
 import 'package:rick_morty/style/app_text_styles.dart';
 
@@ -41,7 +41,9 @@ class EditProfileScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () async {
-                    FilePickerResult? result = await FilePicker.platform.pickFiles();
+                    FilePickerResult? result =
+                        await FilePicker.platform.pickFiles();
+                    print(result!.count);
                   },
                   child: CircleAvatar(
                     radius: 60,
@@ -63,7 +65,7 @@ class EditProfileScreen extends StatelessWidget {
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              children:  [
+              children: [
                 const Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
@@ -73,10 +75,12 @@ class EditProfileScreen extends StatelessWidget {
                 ),
                 ListTile(
                   onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => const ProfileScreen(type: TextFieldType.fio,)));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const ProfileScreen(
+                              type: TextFieldType.fio,
+                            )));
                   },
-                  contentPadding: const EdgeInsets.symmetric(horizontal:0),
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 0),
                   title: const Text(
                     'Изменить ФИО',
                     style: AppTextStyle.textStyle16w500,
@@ -89,10 +93,12 @@ class EditProfileScreen extends StatelessWidget {
                 ),
                 ListTile(
                   onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => const ProfileScreen(type: TextFieldType.login,)));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const ProfileScreen(
+                              type: TextFieldType.login,
+                            )));
                   },
-                  contentPadding: const EdgeInsets.symmetric(horizontal:0),
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 0),
                   title: const Text(
                     'Логин',
                     style: AppTextStyle.textStyle16w500,

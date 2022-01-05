@@ -1,19 +1,7 @@
-
-
-
-
-
 import 'package:flutter/material.dart';
 
-class Sample2 extends StatefulWidget {
-  const Sample2({Key? key}) : super(key: key);
-
-
-  @override
-  State<Sample2> createState() => _Sample2State();
-}
-
-class _Sample2State extends State<Sample2> {
+class Sample3 extends StatelessWidget {
+  const Sample3({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,7 +14,7 @@ class _Sample2State extends State<Sample2> {
             ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
-                    (_, index) => ListTile(
+                (_, index) => ListTile(
                   title: Text("Index: $index"),
                 ),
               ),
@@ -37,6 +25,7 @@ class _Sample2State extends State<Sample2> {
     );
   }
 }
+
 class MySliverAppBar extends SliverPersistentHeaderDelegate {
   final double expandedHeight;
 
@@ -70,19 +59,29 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
           left: MediaQuery.of(context).size.width / 4,
           child: Opacity(
             opacity: (1 - shrinkOffset / expandedHeight),
-            child: Card(
-              elevation: 10,
-              child: SizedBox(
-                height: expandedHeight,
-                width: MediaQuery.of(context).size.width / 2,
-                child: const FlutterLogo(),
-              ),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: expandedHeight,
+                  width: MediaQuery.of(context).size.width / 2,
+                  child: const FlutterLogo(),
+                ),
+                Container(
+                  child: const Text('kbhkbj'),
+                  decoration: const BoxDecoration(
+                    color: Colors.transparent,
+                    borderRadius:
+                    BorderRadius.vertical(top: Radius.circular(20)),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
       ],
     );
   }
+
   @override
   double get maxExtent => expandedHeight;
 

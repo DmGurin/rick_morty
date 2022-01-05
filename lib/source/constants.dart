@@ -1,9 +1,9 @@
-import 'package:rick_morty/screens/episode_screen/episode_entity.dart';
-import 'package:rick_morty/screens/episode_screen/season_entity.dart';
-import 'package:rick_morty/screens/location_screen/location_entity.dart';
-import 'package:rick_morty/screens/person_screen/person_entity.dart';
+import 'package:rick_morty/screens/episodes_screen/episode_entity.dart';
+import 'package:rick_morty/screens/episodes_screen/season_entity.dart';
+import 'package:rick_morty/screens/locations_screen/location_entity.dart';
+import 'package:rick_morty/screens/persons_screen/person_entity.dart';
 import 'package:rick_morty/screens/setting_screen/profile_entity.dart';
-import 'package:rick_morty/sourse/images.dart';
+import 'package:rick_morty/source/images.dart';
 
 List<PersonEntity> personList = [
   PersonEntity(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rick_morty/sourse/images.dart';
+import 'package:rick_morty/source/images.dart';
 import 'package:rick_morty/style/app_colors.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class SplashScreen extends StatelessWidget {
           children: <Widget>[
             Expanded(child: Image.asset(AppImages.logo)),
             Align(
-              alignment: Alignment.bottomCenter,
+                alignment: Alignment.bottomCenter,
                 child: Image.asset(AppImages.face)),
           ],
         ),

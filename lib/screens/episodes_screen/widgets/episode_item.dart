@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:rick_morty/screens/series_screen.dart';
 import 'package:rick_morty/style/app_text_styles.dart';
 
-class EpisodeItem extends StatelessWidget {
-  const EpisodeItem({
+class EpisodesItem extends StatelessWidget {
+  const EpisodesItem({
     Key? key,
     required this.image,
     required this.id,
@@ -23,8 +23,8 @@ class EpisodeItem extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const SeriesScreen()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const SeriesScreen()));
             },
             child: Container(
               width: 60,
