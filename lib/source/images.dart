@@ -17,4 +17,7 @@ class AppImages {
   static const coctail = 'assets/images/coctail.png';
   static const gazorpazor = 'assets/images/gazorpazor.png';
   static const seria = 'assets/images/seria.png';
+  static const searchmorty = 'assets/images/searchmorty.png';
+  static const ogyrchik = 'assets/images/ogyrchik.png';
+  static const bolls = 'assets/images/bolls.png';
 }

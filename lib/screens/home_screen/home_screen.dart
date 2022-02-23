@@ -4,14 +4,15 @@ import 'package:rick_morty/screens/episodes_screen/screen.dart';
 import 'package:rick_morty/screens/locations_screen/screen.dart';
 import 'package:rick_morty/screens/persons_screen/screen.dart';
 import 'package:rick_morty/screens/profile_screen/profile_screen.dart';
-import 'package:rick_morty/screens/sample2.dart';
-import 'package:rick_morty/screens/sample3.dart';
-import 'package:rick_morty/screens/series_screen.dart';
+import 'package:rick_morty/screens/episodes_screen/episode_screen/screen.dart';
+import 'package:rick_morty/source/widget/empty_screen.dart';
 import 'package:rick_morty/screens/setting_screen/screen.dart';
 import 'package:rick_morty/source/constants.dart';
 import 'package:rick_morty/source/svg.dart';
 import 'package:rick_morty/style/app_colors.dart';
 import 'package:rick_morty/style/app_theme.dart';
+
+import '../splash_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -45,8 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
             type: TextFieldType.fio,
           ),
           SeriesScreen(),
-          Sample2(),
-          Sample3(),
+          EmptyScreen(type: ScreenType.location,),
+          SplashScreen(),
           Center(
             child: Text('Second Page'),
           ),

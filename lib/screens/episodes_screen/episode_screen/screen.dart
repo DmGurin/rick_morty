@@ -148,7 +148,7 @@ class BodyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.topCenter,
+
       fit: StackFit.expand,
       clipBehavior: Clip.none,
       children: [

@@ -170,3 +170,4 @@ String theme = 'Темная тема';
 String onoff = 'Включена';
 
 enum TextFieldType { fio, login }
+enum ScreenType {person, location, episode}

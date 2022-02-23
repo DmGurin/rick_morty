@@ -12,5 +12,6 @@ class AppSvg {
   static const arrowright = 'assets/svg/arrowright.svg';
   static const palettetwo = 'assets/svg/palettetwo.svg';
   static const play = 'assets/svg/play.svg';
+  static const cross = 'assets/svg/cross.svg';
 
 }
