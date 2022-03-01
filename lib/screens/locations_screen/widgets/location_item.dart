@@ -6,13 +6,13 @@ class LocationItem extends StatelessWidget {
   const LocationItem({
     Key? key,
     required this.image,
-    required this.nameLocation,
-    required this.typeLocation,
+    required this.name,
+    required this.type,
     required this.dimension,
   }) : super(key: key);
   final String image;
-  final String nameLocation;
-  final String typeLocation;
+  final String name;
+  final String type;
   final String dimension;
 
   @override
@@ -45,12 +45,12 @@ class LocationItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  nameLocation,
+                  name,
                   style: AppTextStyle.textStyle20w500,
                   textAlign: TextAlign.start,
                 ),
                 Text(
-                  '$typeLocation \u{00B7} $dimension',
+                  '$type \u{00B7} $dimension',
                   style: AppTextStyle.textStyle13w500,
                   textAlign: TextAlign.start,
                 ),

@@ -5,17 +5,17 @@ class PersonGridItem extends StatelessWidget {
   const PersonGridItem({
     Key? key,
     required this.image,
-    required this.alive,
-    required this.male,
+    required this.status,
+    required this.gender,
     required this.name,
-    required this.race,
+    required this.species,
   }) : super(key: key);
 
   final String image;
-  final bool alive;
-  final String male;
+  final String status;
+  final String gender;
   final String name;
-  final String race;
+  final String species;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class PersonGridItem extends StatelessWidget {
             height: 18,
           ),
           Text(
-            alive ? 'Живой': 'Мертвый',
+            status,
             style: AppTextStyle.textStyle14w500,
           ),
           Text(
@@ -39,7 +39,7 @@ class PersonGridItem extends StatelessWidget {
             style: AppTextStyle.textStyle16w500,
           ),
           Text(
-            '$race, $male',
+            '$species, $gender',
             textAlign: TextAlign.right,
             style: AppTextStyle.textStyle13w500,
           ),

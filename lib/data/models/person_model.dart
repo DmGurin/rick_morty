@@ -2,15 +2,15 @@ import 'dart:convert';
 
 import 'package:rick_morty/data/models/location_model.dart';
 
-Person personFromJson(String str) => Person.fromJson(json.decode(str));
+PersonModel personFromJson(String str) => PersonModel.fromJson(json.decode(str));
 
-List<Person> personListFromJson(String str) =>
-    List<Person>.from(json.decode(str).map((x) => Person.fromJson(x)));
+List<PersonModel> personListFromJson(String str) =>
+    List<PersonModel>.from(json.decode(str).map((x) => PersonModel.fromJson(x)));
 
-String personToJson(Person data) => json.encode(data.toJson());
+String personToJson(PersonModel data) => json.encode(data.toJson());
 
-class Person {
-  Person({
+class PersonModel {
+  PersonModel({
     required this.id,
     required this.name,
     required this.status,
@@ -38,7 +38,7 @@ class Person {
   final String url;
   final DateTime created;
 
-  factory Person.fromJson(Map<String, dynamic> json) => Person(
+  factory PersonModel.fromJson(Map<String, dynamic> json) => PersonModel(
         id: json["id"],
         name: json["name"],
         status: json["status"],

@@ -66,26 +66,26 @@ List<PersonEntity> personList = [
 List<LocationEntity> locationList = [
   LocationEntity(
     image: AppImages.earth,
-    nameLocation: 'Земля C-137',
-    typeLocation: 'Мир',
+    name: 'Земля C-137',
+    type: 'Мир',
     dimension: 'Измерение C-137',
   ),
   LocationEntity(
     image: AppImages.anatomyPark,
-    nameLocation: 'Анатомический парк',
-    typeLocation: 'Мир',
+    name: 'Анатомический парк',
+    type: 'Мир',
     dimension: 'Измерение C-137',
   ),
   LocationEntity(
     image: AppImages.rick,
-    nameLocation: 'Анатомический парк',
-    typeLocation: 'Мир',
+    name: 'Анатомический парк',
+    type: 'Мир',
     dimension: 'Измерение C-137',
   ),
   LocationEntity(
     image: AppImages.logo,
-    nameLocation: 'Ак',
-    typeLocation: 'Мир',
+    name: 'Ак',
+    type: 'Мир',
     dimension: 'Измерение C-137',
   ),
 ];
