@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rick_morty/screens/edit_profile_screen/edit_profile_screen.dart';
 import 'package:rick_morty/style/app_colors.dart';
@@ -49,8 +48,8 @@ class ProfileItem extends StatelessWidget {
       ),
       GestureDetector(
         onTap: () {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const EditProfileScreen()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const EditProfileScreen()));
         },
         child: Container(
           width: double.infinity,
