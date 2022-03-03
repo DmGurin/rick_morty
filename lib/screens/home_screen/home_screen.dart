@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:rick_morty/screens/episodes_screen/episode_screen/screen.dart';
 import 'package:rick_morty/screens/episodes_screen/screen.dart';
 import 'package:rick_morty/screens/locations_screen/screen.dart';
 import 'package:rick_morty/screens/persons_screen/screen.dart';
 import 'package:rick_morty/screens/profile_screen/profile_screen.dart';
-import 'package:rick_morty/screens/episodes_screen/episode_screen/screen.dart';
-import 'package:rick_morty/source/widget/empty_screen.dart';
 import 'package:rick_morty/screens/setting_screen/screen.dart';
 import 'package:rick_morty/source/constants.dart';
 import 'package:rick_morty/source/svg.dart';
@@ -46,7 +45,6 @@ class _HomeScreenState extends State<HomeScreen> {
             type: TextFieldType.fio,
           ),
           SeriesScreen(),
-          EmptyScreen(type: ScreenType.location,),
           SplashScreen(),
           Center(
             child: Text('Second Page'),
