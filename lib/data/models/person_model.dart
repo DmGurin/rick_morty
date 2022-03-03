@@ -9,6 +9,55 @@ List<PersonModel> personListFromJson(String str) =>
 
 String personToJson(PersonModel data) => json.encode(data.toJson());
 
+
+class Person {
+  Person({
+    required this.info,
+    required this.results,
+  });
+
+  final Info info;
+  final List<PersonModel> results;
+
+  factory Person.fromJson(Map<String, dynamic> json) => Person(
+    info: Info.fromJson(json["info"]),
+    results: List<PersonModel>.from(json["results"].map((x) => PersonModel.fromJson(x))),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "info": info.toJson(),
+    "results": List<dynamic>.from(results.map((x) => x.toJson())),
+  };
+}
+
+class Info {
+  Info({
+    required this.count,
+    required this.pages,
+    required this.next,
+    required this.prev,
+  });
+
+  final int count;
+  final int pages;
+  final String next;
+  final dynamic prev;
+
+  factory Info.fromJson(Map<String, dynamic> json) => Info(
+    count: json["count"],
+    pages: json["pages"],
+    next: json["next"],
+    prev: json["prev"],
+  );
+
+  Map<String, dynamic> toJson() => {
+    "count": count,
+    "pages": pages,
+    "next": next,
+    "prev": prev,
+  };
+}
+
 class PersonModel {
   PersonModel({
     required this.id,
@@ -39,32 +88,33 @@ class PersonModel {
   final DateTime created;
 
   factory PersonModel.fromJson(Map<String, dynamic> json) => PersonModel(
-        id: json["id"],
-        name: json["name"],
-        status: json["status"],
-        species: json["species"],
-        type: json["type"],
-        gender: json["gender"],
-        origin: Location.fromJson(json["origin"]),
-        location: Location.fromJson(json["location"]),
-        image: json["image"],
-        episode: List<String>.from(json["episode"].map((x) => x)),
-        url: json["url"],
-        created: DateTime.parse(json["created"]),
-      );
+    id: json["id"],
+    name: json["name"],
+    status: json["status"],
+    species: json["species"],
+    type: json["type"],
+    gender: json["gender"],
+    origin: Location.fromJson(json["origin"]),
+    location: Location.fromJson(json["location"]),
+    image: json["image"],
+    episode: List<String>.from(json["episode"].map((x) => x)),
+    url: json["url"],
+    created: DateTime.parse(json["created"]),
+  );
 
   Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "status": status,
-        "species": species,
-        "type": type,
-        "gender": gender,
-        "origin": origin.toJson(),
-        "location": location.toJson(),
-        "image": image,
-        "episode": List<dynamic>.from(episode.map((x) => x)),
-        "url": url,
-        "created": created.toIso8601String(),
-      };
+    "id": id,
+    "name": name,
+    "status": status,
+    "species": species,
+    "type": type,
+    "gender": gender,
+    "origin": origin.toJson(),
+    "location": location.toJson(),
+    "image": image,
+    "episode": List<dynamic>.from(episode.map((x) => x)),
+    "url": url,
+    "created": created.toIso8601String(),
+  };
 }
+
