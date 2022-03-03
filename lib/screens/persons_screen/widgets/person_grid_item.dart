@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rick_morty/source/widget/avatar_widget.dart';
 import 'package:rick_morty/style/app_text_styles.dart';
 
 class PersonGridItem extends StatelessWidget {
@@ -24,7 +23,10 @@ class PersonGridItem extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 24.0),
       child: Column(
         children: [
-          AvatarWidget(image: image),
+          CircleAvatar(
+            radius: 60,
+            child: Image.asset(image),
+          ),
           const SizedBox(
             height: 18,
           ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rick_morty/source/widget/avatar_widget.dart';
 import 'package:rick_morty/style/app_text_styles.dart';
 
 class PersonListItem extends StatelessWidget {
@@ -24,7 +23,10 @@ class PersonListItem extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 24.0),
       child: Row(
         children: [
-          AvatarWidget(image: image),
+          CircleAvatar(
+            radius: 37,
+            child: Image.asset(image),
+          ),
           const SizedBox(
             width: 18,
           ),
@@ -36,7 +38,7 @@ class PersonListItem extends StatelessWidget {
                 style: AppTextStyle.textStyle14w500,
               ),
               Text(
-                name,
+               name,
                 style: AppTextStyle.textStyle16w500,
               ),
               Text(

@@ -4,6 +4,7 @@ import 'package:rick_morty/blocs/location_bloc/location_bloc.dart';
 import 'package:rick_morty/blocs/location_bloc/location_event.dart';
 import 'package:rick_morty/blocs/location_bloc/location_state.dart';
 import 'package:rick_morty/screens/locations_screen/widgets/location_item.dart';
+import 'package:rick_morty/source/constants.dart';
 import 'package:rick_morty/source/widget/text_filed/search_text_field.dart';
 import 'package:rick_morty/style/app_colors.dart';
 import 'package:rick_morty/style/app_text_styles.dart';
@@ -27,13 +28,13 @@ class _LocationScreenState extends State<LocationScreen> {
         ),
         backgroundColor: AppColors.darkBlue,
         body: BlocConsumer<LocationBloc, LocationState>(
-          listener: (context, state) {
-            if (state is LoadingLocationState) {
+          listener: (context, state){
+            if (state is LoadingLocationState){
               const CircularProgressIndicator();
             }
           },
-          builder: (context, state) {
-            if (state is DataLocationState) {
+          builder: (context, state){
+            if (state is DataLocationState){
               return SingleChildScrollView(
                 padding: const EdgeInsets.all(16),
                 child: Column(
@@ -58,10 +59,10 @@ class _LocationScreenState extends State<LocationScreen> {
                       itemCount: state.locations.length,
                       itemBuilder: (context, index) {
                         return LocationItem(
-                          image: state.locations[index].image!,
+                          image: state.locations[index].image,
                           name: state.locations[index].name,
-                          type: state.locations[index].type!,
-                          dimension: state.locations[index].dimension!,
+                          type: state.locations[index].type,
+                          dimension: state.locations[index].dimension,
                         );
                       },
                     )
