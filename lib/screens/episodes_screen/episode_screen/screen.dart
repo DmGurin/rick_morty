@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rick_morty/screens/setting_screen/widget/series_list_item.dart';
@@ -33,9 +33,7 @@ class _SeriesScreenState extends State<SeriesScreen> {
             var val2 =
                 (((_scrollController.offset - 0) / (400 - 0)) * (1.0 - 0.0) +
                     0);
-            if (kDebugMode) {
-              print(val1 - val2 % 0.1);
-            }
+            print(val1 - val2 % 0.1);
             offsetNegative = 1 - (val1 - val2 % 0.1);
           } else {
             offsetNegative = 0.0;
@@ -150,6 +148,7 @@ class BodyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+
       fit: StackFit.expand,
       clipBehavior: Clip.none,
       children: [

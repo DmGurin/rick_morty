@@ -1,5 +1,4 @@
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rick_morty/screens/profile_screen/profile_screen.dart';
@@ -44,9 +43,7 @@ class EditProfileScreen extends StatelessWidget {
                   onTap: () async {
                     FilePickerResult? result =
                         await FilePicker.platform.pickFiles();
-                    if (kDebugMode) {
-                      print(result!.count);
-                    }
+                    print(result!.count);
                   },
                   child: CircleAvatar(
                     radius: 60,
