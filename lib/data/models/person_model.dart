@@ -4,8 +4,13 @@ import 'package:rick_morty/data/models/location_model.dart';
 
 PersonModel personFromJson(String str) => PersonModel.fromJson(json.decode(str));
 
-List<PersonModel> personListFromJson(String str) =>
-    List<PersonModel>.from(json.decode(str).map((x) => PersonModel.fromJson(x)));
+List<PersonModel> personListFromJson(String str) {
+  return List<PersonModel>.from(
+    json.decode(str).map(
+          (x) => PersonModel.fromJson(x),
+    ),
+  );
+}
 
 String personToJson(PersonModel data) => json.encode(data.toJson());
 
@@ -21,9 +26,9 @@ class Person {
 
   factory Person.fromJson(Map<String, dynamic> json) => Person(
     info: Info.fromJson(json["info"]),
-    results: List<PersonModel>.from(json["results"].map((x) => PersonModel.fromJson(x))),
+    results: List<PersonModel>.from(
+        json["results"].map((x) => PersonModel.fromJson(x))),
   );
-
   Map<String, dynamic> toJson() => {
     "info": info.toJson(),
     "results": List<dynamic>.from(results.map((x) => x.toJson())),
@@ -116,5 +121,7 @@ class PersonModel {
     "url": url,
     "created": created.toIso8601String(),
   };
+
+  compareTo(PersonModel b) {}
 }
 

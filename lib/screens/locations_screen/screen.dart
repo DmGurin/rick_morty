@@ -59,10 +59,10 @@ class _LocationScreenState extends State<LocationScreen> {
                       itemCount: state.locations.length,
                       itemBuilder: (context, index) {
                         return LocationItem(
-                          image: state.locations[index].image,
+                          image: state.locations[index].image!,
                           name: state.locations[index].name,
-                          type: state.locations[index].type,
-                          dimension: state.locations[index].dimension,
+                          type: state.locations[index].type!,
+                          dimension: state.locations[index].dimension!,
                         );
                       },
                     )

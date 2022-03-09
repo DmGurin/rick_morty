@@ -41,22 +41,24 @@ class EpisodesItem extends StatelessWidget {
           const SizedBox(
             width: 16,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'СЕРИЯ $id',
-                style: AppTextStyle.textStyle10w500,
-              ),
-              Text(
-                name,
-                style: AppTextStyle.textStyle16w500,
-              ),
-              Text(
-                airDate,
-                style: AppTextStyle.textStyle13w500,
-              ),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'СЕРИЯ $id',
+                  style: AppTextStyle.textStyle10w500,
+                ),
+                Text(
+                  name,
+                  style: AppTextStyle.textStyle16w500.copyWith(overflow: TextOverflow.ellipsis),
+                ),
+                Text(
+                  airDate,
+                  style: AppTextStyle.textStyle13w500,
+                ),
+              ],
+            ),
           ),
         ],
       ),

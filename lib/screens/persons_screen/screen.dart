@@ -33,8 +33,8 @@ class _PersonsScreenState extends State<PersonsScreen> {
           ),
           backgroundColor: AppColors.darkBlue,
           body: BlocConsumer<PersonsBloc, PersonsState>(
-            listener: (context, state){
-              if (state is LoadingPersonsState){
+            listener: (context, state) {
+              if (state is LoadingPersonsState) {
                 const CircularProgressIndicator();
               }
               // if (state is ErrorPersonState){
@@ -45,8 +45,8 @@ class _PersonsScreenState extends State<PersonsScreen> {
               //   );
               // }
             },
-            builder: (context, state){
-              if (state is DataPersonsState){
+            builder: (context, state) {
+              if (state is DataPersonsState) {
                 return SingleChildScrollView(
                   padding: const EdgeInsets.all(20),
                   child: Column(
@@ -61,8 +61,8 @@ class _PersonsScreenState extends State<PersonsScreen> {
                             ),
                           ),
                           GestureDetector(
-                            child:
-                            SvgPicture.asset(_isGrid ? AppSvg.grid : AppSvg.list),
+                            child: SvgPicture.asset(
+                                _isGrid ? AppSvg.grid : AppSvg.list),
                             onTap: () {
                               setState(() {
                                 _isGrid = !_isGrid;
@@ -76,39 +76,39 @@ class _PersonsScreenState extends State<PersonsScreen> {
                       ),
                       _isGrid
                           ? ListView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: state.persons.length,
-                        itemBuilder: (context, index) {
-                          return PersonListItem(
-                            image: state.persons[index].image,
-                            status: state.persons[index].status,
-                            gender: state.persons[index].gender,
-                            name: state.persons[index].name,
-                            species: state.persons[index].species,
-                          );
-                        },
-                      )
+                              physics: const NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              itemCount: state.persons.length,
+                              itemBuilder: (context, index) {
+                                return PersonListItem(
+                                  image: state.persons[index].image,
+                                  status: state.persons[index].status,
+                                  gender: state.persons[index].gender,
+                                  name: state.persons[index].name,
+                                  species: state.persons[index].species,
+                                );
+                              },
+                            )
                           : GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: state.persons.length,
-                        itemBuilder: (context, index) {
-                          return PersonGridItem(
-                            image: state.persons[index].image,
-                            status: state.persons[index].status,
-                            gender: state.persons[index].gender,
-                            name: state.persons[index].name,
-                            species: state.persons[index].species,
-                          );
-                        },
-                        gridDelegate:
-                        const SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 200,
-                            childAspectRatio: 2 / 2.55,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20),
-                      ),
+                              physics: const NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              itemCount: state.persons.length,
+                              itemBuilder: (context, index) {
+                                return PersonGridItem(
+                                  image: state.persons[index].image,
+                                  status: state.persons[index].status,
+                                  gender: state.persons[index].gender,
+                                  name: state.persons[index].name,
+                                  species: state.persons[index].species,
+                                );
+                              },
+                              gridDelegate:
+                                  const SliverGridDelegateWithMaxCrossAxisExtent(
+                                      maxCrossAxisExtent: 200,
+                                      childAspectRatio: 2 / 3,
+                                      crossAxisSpacing: 20,
+                                      mainAxisSpacing: 20),
+                            ),
                     ],
                   ),
                 );
