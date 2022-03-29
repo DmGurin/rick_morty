@@ -19,13 +19,15 @@ class EditProfileScreen extends StatelessWidget {
         backgroundColor: AppColors.darkBlue,
         title: Row(
           children: const [
-            SizedBox(
-              width: 25,
-            ),
-            Text(
-              'Редактировать профиль',
-              style: TextStyle(
-                color: AppColors.white,
+            // SizedBox(
+            //   width: 25,
+            // ),
+            Expanded(
+              child: Text(
+                'Редактировать профиль',
+                style: TextStyle(
+                  color: AppColors.white,
+                ),
               ),
             ),
           ],

@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:rick_morty/source/widget/text_filed/main_text_field.dart';
 
-class FioBody extends StatelessWidget {
+class FioBody extends StatefulWidget {
   const FioBody({Key? key}) : super(key: key);
 
+
+  @override
+  State<FioBody> createState() => _FioBodyState();
+}
+
+class _FioBodyState extends State<FioBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.max,
       children: const [
         MainTextField(
           value: 'Oleg',

@@ -50,10 +50,10 @@ class ApiServices {
     }
     return results;
   }
-  Future<List<EpisodeModel>> getEpisodes() async {
+  Future<List<EpisodeModel>> getEpisodes(String page) async {
     List<EpisodeModel> results = [];
     var response = await http.get(
-        Uri.parse('https://rickandmortyapi.com/api/character/'));
+        Uri.parse('https://rickandmortyapi.com/api/episode?page=$page'));
     final stringJson = utf8.decode(response.bodyBytes);
     try {
       Map<String, dynamic> mapJson = jsonDecode(stringJson);

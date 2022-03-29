@@ -57,6 +57,7 @@ class Info {
 class EpisodeModel {
   EpisodeModel({
     required this.id,
+    this.image = 'https://irl.by/wp-content/uploads/2017/08/52_nc7DbtMU-850x607.jpg',
     required this.name,
     required this.airDate,
     required this.episode,
@@ -66,6 +67,7 @@ class EpisodeModel {
   });
 
   final int id;
+  final String? image;
   final String name;
   final String airDate;
   final String episode;

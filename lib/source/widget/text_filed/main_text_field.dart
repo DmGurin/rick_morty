@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rick_morty/style/app_colors.dart';
 import 'package:rick_morty/style/app_text_styles.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MainTextField extends StatefulWidget {
   const MainTextField({
@@ -8,13 +9,10 @@ class MainTextField extends StatefulWidget {
     required this.value,
     required this.labelText,
     required this.hintText,
-
   }) : super(key: key);
   final String value;
   final String labelText;
   final String hintText;
-
-
 
   @override
   State<MainTextField> createState() => _MainTextFieldState();
@@ -44,7 +42,9 @@ class _MainTextFieldState extends State<MainTextField> {
         SizedBox(
           height: 48,
           child: TextField(
-            style: const TextStyle(color: AppColors.grey,),
+            style: const TextStyle(
+              color: AppColors.grey,
+            ),
             controller: _controller,
             decoration: InputDecoration(
               filled: true,

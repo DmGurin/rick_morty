@@ -4,7 +4,6 @@ import 'package:rick_morty/blocs/location_bloc/location_bloc.dart';
 import 'package:rick_morty/blocs/location_bloc/location_event.dart';
 import 'package:rick_morty/blocs/location_bloc/location_state.dart';
 import 'package:rick_morty/screens/locations_screen/widgets/location_item.dart';
-import 'package:rick_morty/source/constants.dart';
 import 'package:rick_morty/source/widget/text_filed/search_text_field.dart';
 import 'package:rick_morty/style/app_colors.dart';
 import 'package:rick_morty/style/app_text_styles.dart';

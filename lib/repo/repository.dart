@@ -12,14 +12,15 @@ class Repository {
     return response;
   }
 
+
   Future<List<Location>> getLocation() async {
     var response = await apiServices.getLocation();
     response.sort((a, b) => a.name.compareTo(b.name));
     return response;
   }
-  Future<List<EpisodeModel>> getEpisodeModel() async {
-    var response = await apiServices.getEpisodes();
-    response.sort((a, b) => a.name.compareTo(b.name));
+  Future<List<EpisodeModel>> getEpisodeModel(String page) async {
+    var response = await apiServices.getEpisodes(page);
+    //response.sort((a, b) => a.name.compareTo(b.name));
     return response;
   }
 }

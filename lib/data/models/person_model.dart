@@ -122,6 +122,6 @@ class PersonModel {
     "created": created.toIso8601String(),
   };
 
-  compareTo(PersonModel b) {}
+
 }
 
